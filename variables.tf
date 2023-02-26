@@ -12,18 +12,18 @@ variable "callback_urls" {
   default = []
 }
 
-variable "twilio_sid" {
-  type = string
-}
-
-variable "twilio_token" {
-  type = string
-}
-
-variable "smtp_user" {
-  type = string
-}
-
-variable "smtp_pass" {
-  type = string
-}
+#variable "twilio_sid" {
+#  type = string
+#}
+#
+#variable "twilio_token" {
+#  type = string
+#}
+#
+#variable "smtp_user" {
+#  type = string
+#}
+#
+#variable "smtp_pass" {
+#  type = string
+#}

@@ -6,7 +6,7 @@ resource "auth0_email" "smtp_email_provider" {
   credentials {
     smtp_host = "email-smtp.ap-southeast-1.amazonaws.com"
     smtp_port = 587
-    smtp_user = var.smtp_user
-    smtp_pass = var.smtp_pass
+    smtp_user = module.secrets.smtp_user
+    smtp_pass = module.secrets.smtp_pass
   }
 }

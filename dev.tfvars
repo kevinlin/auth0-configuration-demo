@@ -9,7 +9,7 @@ callback_urls = [
   "https://dev.nextgen.com/",
   "https://dev.nextgen.com/callback/",
 ]
-twilio_sid   = "ACdbd49ce217b1092315cc24ee91b67caf"
-twilio_token = "61139e17ed31c6f9736ed637107d5fed"
-smtp_user    = "**********"
-smtp_pass    = "**********"
+#twilio_sid   = module.secrets.twilio_sid
+#twilio_token = module.secrets.twilio_token
+#smtp_user    = module.secrets.smtp_user
+#smtp_pass    = module.secrets.smtp_pass

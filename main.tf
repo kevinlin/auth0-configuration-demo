@@ -8,3 +8,7 @@ terraform {
 }
 
 provider "auth0" {}
+
+module "secrets" {
+  source = "./secrets"
+}
