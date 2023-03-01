@@ -12,12 +12,12 @@ resource "auth0_action" "post_login" {
           const nickname = event.user.nickname;
 
           if (event.authorization) {
-            api.idToken.setCustomClaim(`language`, language);
-            api.idToken.setCustomClaim(`nextgen_user_id`, nextgen_user_id);
+             api.idToken.setCustomClaim('language', language);
+            api.idToken.setCustomClaim('nextgen_user_id', nextgen_user_id);
             if (nickname) {
-              api.idToken.setCustomClaim(`user_name`, nickname);
-              api.idToken.setCustomClaim(`given_name`, nickname.split('.')[0]);
-              api.idToken.setCustomClaim(`family_name`, nickname.split('.')[1]);
+              api.idToken.setCustomClaim('user_name', nickname);
+              api.idToken.setCustomClaim('given_name', nickname.split('.')[0]);
+              api.idToken.setCustomClaim('family_name', nickname.split('.')[1]);
             }
 
             api.accessToken.setCustomClaim(`$${namespace}/language`, language);
