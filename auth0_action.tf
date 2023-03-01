@@ -36,3 +36,13 @@ resource "auth0_action" "post_login" {
     version = "v3"
   }
 }
+
+resource "auth0_trigger_binding" "post_login" {
+  depends_on = [auth0_action.post_login]
+  trigger    = "post-login"
+
+  actions {
+    display_name = auth0_action.post_login.name
+    id           = auth0_action.post_login.id
+  }
+}
